@@ -1,0 +1,12 @@
+{
+  "name": "Meteor-wrapper-for-Font-Awesome",
+  "scripts": {
+    "test": "meteor test-packages ./",
+    "testci": "spacejam --mongo-url mongodb:// test-packages ./",
+    "publish": "meteor publish"
+  },
+  "dependences": {},
+  "devDependencies": {
+    "spacejam": "^1.1.4"
+  }
+}
