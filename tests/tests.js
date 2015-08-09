@@ -24,7 +24,6 @@ fontAssets.forEach(function (filename) {
         }
         else {
           var errStr = filename + ' font could not be downloaded';
-          console.dir(result);
           test.isTrue(result.content.length > 1000, errStr);
         }
         done();
