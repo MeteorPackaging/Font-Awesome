@@ -1,12 +1,11 @@
 {
-  "name": "Meteor-wrapper-for-Font-Awesome",
-  "scripts": {
-    "test": "meteor test-packages ./",
-    "testci": "spacejam --mongo-url mongodb:// test-packages ./",
-    "publish": "meteor publish"
-  },
-  "dependences": {},
   "devDependencies": {
-    "spacejam": "^1.1.4"
+    "del": "^1.1.1",
+    "gulp-download": "0.0.1",
+    "gulp-git": "^1.2.1",
+    "gulp-replace": "^0.5.3",
+    "gulp-util": "^3.0.4",
+    "gulp": "^3.8.11",
+    "run-sequence": "^1.1.0"
   }
 }

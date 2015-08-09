@@ -1,5 +1,4 @@
-.idea
-
+upstream
 node_modules
-
-npm-debug.log
+phantom_runner.js
+start_test.js
