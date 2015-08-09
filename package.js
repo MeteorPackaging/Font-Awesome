@@ -1,7 +1,7 @@
 Package.describe({
   name: 'fortawesome:fontawesome',
   summary: 'Font Awesome (official): 500+ scalable vector icons, customizable via CSS, Retina friendly',
-  version: '4.3.0',
+  version: '4.4.0',
   git: 'https://github.com/MeteorPackaging/Font-Awesome.git',
   documentation: 'README.md'
 });
@@ -9,6 +9,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.1');
+
   api.addFiles([
     // we bundle all font files, but the client will request only one of them via the CSS @font-face rule
     'upstream/fonts/fontawesome-webfont.eot',   // IE8 or older only understands EOT. IE9+ will read it too because it loads the first occurrence of `src`
@@ -16,7 +17,10 @@ Package.onUse(function(api) {
     'upstream/fonts/fontawesome-webfont.ttf',   // Android Browers 4.1, 4.3 - http://caniuse.com/#feat=ttf
     'upstream/fonts/fontawesome-webfont.woff',  // Most modern browsers
     'upstream/fonts/fontawesome-webfont.woff2', // Chrome 36+, Opera 23+; improves compression
+    'upstream/fonts/FontAwesome.otf',
+  ], 'client', {isAsset: true});
 
+  api.addFiles([
     'upstream/css/font-awesome.css'
   ], 'client');
 });
@@ -26,6 +30,7 @@ Package.onTest(function(api) {
   api.use('fortawesome:fontawesome');
 
   api.use([
+    'http',
     'tinytest',
     'test-helpers'
   ], ['client']);
