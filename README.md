@@ -1,5 +1,9 @@
 [Font Awesome](http://fontawesome.io/) packaged for [Meteor.js](http://meteor.com).
 
+Please note that starting with Meteor 1.3, you should be using npm packages directly.
+
+Wrapper packages such as this one are now obsolete.
+
 # Usage
 
 Just run `meteor add fortawesome:fontawesome` in your project, then use the standard Font Awesome markup:
@@ -14,19 +18,19 @@ If you encounter an issue while using this package, please CC @dandv when you fi
 
 # Building
 
-The package is driven by the `scripts` section in [package.json](package.json). To see the available scripts, run
+The package is driven by [the Gulp file](gulpfie.js). First, run
 
-    npm run
+    node_modules/.bin/gulp getUpstream
+
+Then, run
+
+    node_modules/.bin/gulp updateVersion
+
+Now you can commit the updated `package.js` (`autopublish.json` will no longer be useful after the [decommission of autopublish](https://github.com/MeteorPackaging/autopublish.meteor.com/issues/27))
 
 For example, to test Font Awesome interactively, run
 
-    npm run test
-
-You'll see the Tinytest UI at http://localhost:3000.
-
-For CI, run
-
-    npm run testci
+    node_modules/.bin/gulp test
 
 
 # DONE
