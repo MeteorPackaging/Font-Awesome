@@ -1,7 +1,7 @@
 Package.describe({
   name: 'fortawesome:fontawesome',
   summary: 'Font Awesome (official): 500+ scalable vector icons, customizable via CSS, Retina friendly',
-  version: '4.6.3',
+  version: '4.7.0',
   git: 'https://github.com/MeteorPackaging/Font-Awesome.git',
   documentation: 'README.md'
 });

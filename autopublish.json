@@ -1,8 +1,8 @@
 {
-  "version": "4.6.3",
+  "version": "4.7.0",
   "upstream": {
     "git": "https://github.com/FortAwesome/Font-Awesome.git",
-    "release": "v4.6.3",
+    "release": "v4.7.0",
     "versionFile": "package.json"
   },
   "hook": {

@@ -18,17 +18,14 @@ If you encounter an issue while using this package, please CC @dandv when you fi
 
 # Building
 
-The package is driven by [the Gulp file](gulpfie.js). First, run
+1. `npm install` (or just `yarn`)
+2. Edit `autopublish.json` and update the version number.
+3. `node_modules/.bin/gulp getUpstream`
+4. `node_modules/.bin/gulp updateVersion`
 
-    node_modules/.bin/gulp getUpstream
+Now you can commit the updated `package.js` and `autopublish.json` (even though the latter is no longer useful after the [decommission of autopublish](https://github.com/MeteorPackaging/autopublish.meteor.com/issues/27)).
 
-Then, run
-
-    node_modules/.bin/gulp updateVersion
-
-Now you can commit the updated `package.js` (`autopublish.json` will no longer be useful after the [decommission of autopublish](https://github.com/MeteorPackaging/autopublish.meteor.com/issues/27))
-
-For example, to test Font Awesome interactively, run
+To test Font Awesome interactively, run
 
     node_modules/.bin/gulp test
 
